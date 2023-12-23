@@ -20,16 +20,207 @@ html {
 }
 
 body {
-  background-color: var(--pure);
   font-family: "Poppins", sans-serif;
-}
-body header {
-  background: var(--dark);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 }
 body .container {
   max-width: 1152px;
   padding: 0 15px;
   margin: 0 auto;
+}
+body header {
+  /*oi*/
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 6rem;
+  /*oi*/
+  background: var(--dark);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+}
+body header nav {
+  padding: 2rem 0;
+}
+body header nav .left a {
+  color: var(--pure);
+  text-decoration: none;
+  margin-right: 2rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+body header nav .left a:hover {
+  color: var(--primary);
+}
+body header nav .left .branding {
+  margin-right: 3rem;
+}
+body header div.hero {
+  padding: 3rem 0;
+}
+body header div.hero .left {
+  width: 400px;
+}
+body header div.hero .left img {
+  width: 100%;
+  height: auto;
+}
+body header div.hero .right {
+  margin-top: 0rem;
+  color: var(--pure);
+}
+body header div.hero .right h6 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+body header div.hero .right h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+body header div.hero .right h1 span {
+  color: var(--primary);
+}
+body header div.hero .right p {
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+body section {
+  padding: 6rem 0;
+}
+body section.about .about-me-img {
+  height: 450px;
+}
+body section.about h1 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+body section.about h1 span {
+  color: var(--primary);
+}
+body section.about h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+body section.about p {
+  font-family: "Lato", sans-serif;
+  color: var(--ternary);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+body section.about .social a {
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 0.6rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+body section.about .social a:hover {
+  background: var(--primary);
+}
+body section.about .social a img {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+body section .section-heading {
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 0.5;
+}
+body section .section-heading span {
+  color: var(--primary);
+}
+body section .section-heading + p {
+  color: var(--ternary);
+  font-family: "Lato", sans-serif;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+body section.services {
+  background: var(--light);
+}
+body section.services .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 6rem;
+}
+body section.services .card-wrapper .card {
+  background: var(--pure);
+  padding: 3rem 2rem;
+  position: relative;
+  padding-top: 5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+body section.services .card-wrapper .card img {
+  position: absolute;
+  top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+body section.services .card-wrapper .card h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+body section.services .card-wrapper .card p {
+  font-family: "Lato", sans-serif;
+  color: var(--ternary);
+  line-height: 1.6;
+}
+body section.services .card-wrapper .card:hover {
+  background: var(--dark);
+}
+body section.services .card-wrapper .card:hover h2, body section.services .card-wrapper .card:hover p {
+  color: var(--pure);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
 }/*# sourceMappingURL=style.css.map */
